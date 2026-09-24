@@ -1,0 +1,1188 @@
+{
+ "name": "Yellowstone",
+ "built": "2026-09-24",
+ "contract": "docs/YELLOWSTONE-PLAN.md",
+ "frame": {
+  "crs": "EPSG:32612",
+  "E0": 540000.0,
+  "N0": 4941000.0,
+  "Y0": 2200.0,
+  "extent": [
+   -50000.0,
+   50000.0
+  ],
+  "x": "E - E0",
+  "z": "-(N - N0)",
+  "y": "elevation - Y0"
+ },
+ "encoding": {
+  "type": "uint16le",
+  "samples": 257,
+  "order": "x fastest, then z",
+  "value": "round((y + 1000) * 10)"
+ },
+ "levels": [
+  {
+   "level": 0,
+   "cell": 30.0,
+   "tileSize": 7680.0,
+   "tiles": 196,
+   "grid": 14
+  },
+  {
+   "level": 1,
+   "cell": 60.0,
+   "tileSize": 15360.0,
+   "tiles": 49,
+   "grid": 7
+  },
+  {
+   "level": 2,
+   "cell": 120.0,
+   "tileSize": 30720.0,
+   "tiles": 16,
+   "grid": 4
+  },
+  {
+   "level": 3,
+   "cell": 240.0,
+   "tileSize": 61440.0,
+   "tiles": 4,
+   "grid": 2
+  },
+  {
+   "level": 4,
+   "cell": 480.0,
+   "tileSize": 122880.0,
+   "tiles": 1,
+   "grid": 1
+  },
+  {
+   "level": 5,
+   "cell": 960.0,
+   "tileSize": 245760.0,
+   "tiles": 1,
+   "grid": 1
+  }
+ ],
+ "hero": {
+  "level": -1,
+  "cell": 10.0,
+  "tileSize": 2560.0,
+  "tiles": [
+   [
+    6,
+    18
+   ],
+   [
+    7,
+    18
+   ],
+   [
+    8,
+    18
+   ],
+   [
+    9,
+    18
+   ],
+   [
+    10,
+    18
+   ],
+   [
+    11,
+    18
+   ],
+   [
+    6,
+    19
+   ],
+   [
+    7,
+    19
+   ],
+   [
+    8,
+    19
+   ],
+   [
+    9,
+    19
+   ],
+   [
+    10,
+    19
+   ],
+   [
+    11,
+    19
+   ],
+   [
+    6,
+    20
+   ],
+   [
+    7,
+    20
+   ],
+   [
+    8,
+    20
+   ],
+   [
+    9,
+    20
+   ],
+   [
+    10,
+    20
+   ],
+   [
+    11,
+    20
+   ],
+   [
+    6,
+    21
+   ],
+   [
+    7,
+    21
+   ],
+   [
+    8,
+    21
+   ],
+   [
+    9,
+    21
+   ],
+   [
+    10,
+    21
+   ],
+   [
+    11,
+    21
+   ],
+   [
+    6,
+    22
+   ],
+   [
+    7,
+    22
+   ],
+   [
+    8,
+    22
+   ],
+   [
+    9,
+    22
+   ],
+   [
+    10,
+    22
+   ],
+   [
+    11,
+    22
+   ],
+   [
+    6,
+    23
+   ],
+   [
+    7,
+    23
+   ],
+   [
+    8,
+    23
+   ],
+   [
+    9,
+    23
+   ],
+   [
+    10,
+    23
+   ],
+   [
+    11,
+    23
+   ],
+   [
+    6,
+    24
+   ],
+   [
+    7,
+    24
+   ],
+   [
+    8,
+    24
+   ],
+   [
+    9,
+    24
+   ],
+   [
+    10,
+    24
+   ],
+   [
+    11,
+    24
+   ],
+   [
+    6,
+    25
+   ],
+   [
+    7,
+    25
+   ],
+   [
+    8,
+    25
+   ],
+   [
+    9,
+    25
+   ],
+   [
+    10,
+    25
+   ],
+   [
+    11,
+    25
+   ],
+   [
+    6,
+    26
+   ],
+   [
+    7,
+    26
+   ],
+   [
+    8,
+    26
+   ],
+   [
+    9,
+    26
+   ],
+   [
+    10,
+    26
+   ],
+   [
+    11,
+    26
+   ],
+   [
+    6,
+    27
+   ],
+   [
+    7,
+    27
+   ],
+   [
+    8,
+    27
+   ],
+   [
+    9,
+    27
+   ],
+   [
+    10,
+    27
+   ],
+   [
+    11,
+    27
+   ]
+  ]
+ },
+ "landcover": {
+  "levels": [
+   0,
+   1
+  ],
+  "type": "uint8",
+  "classes": "NLCD 2021",
+  "tiles": {
+   "0": 196,
+   "1": 49
+  }
+ },
+ "counts": {
+  "thermal": 9654,
+  "rivers": 1646,
+  "lakes": 328,
+  "roads": 2827
+ },
+ "sources": [
+  {
+   "what": "elevation",
+   "title": "USGS 3DEP 1/3 arc second DEM, via the TNM Access API: every level and the hero tiles",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "name": "dem13_n44w110",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n44w110/USGS_13_n44w110_20240325.tif",
+     "published": "2024-03-25",
+     "retrieved": "2026-09-24T13:45:29Z",
+     "bytes": 421041897,
+     "sha256": "dcb63cc1c9fa6ba0bcb2068ad41107dfc4544ef58d83474d78cca7f4b2621f7b"
+    },
+    {
+     "name": "dem13_n44w111",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n44w111/USGS_13_n44w111_20250122.tif",
+     "published": "2025-01-23",
+     "retrieved": "2026-09-24T13:46:01Z",
+     "bytes": 415445573,
+     "sha256": "4b2b5a46a724e8b0f1324d0b74089be62ec09e4e0791ff0f52cd43829579b12f"
+    },
+    {
+     "name": "dem13_n44w112",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n44w112/USGS_13_n44w112_20260429.tif",
+     "published": "2026-04-29",
+     "retrieved": "2026-09-24T13:46:31Z",
+     "bytes": 400303984,
+     "sha256": "97c3cc7e467b378176d76c50213a2b85b81e0ecf6dc78400a29a65f825b495b6"
+    },
+    {
+     "name": "dem13_n45w110",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n45w110/USGS_13_n45w110_20250122.tif",
+     "published": "2025-01-23",
+     "retrieved": "2026-09-24T13:47:03Z",
+     "bytes": 428910673,
+     "sha256": "64aefa67da5257833a484bec988d2c28b0ab5612a9d017c616425bd5a3b2e379"
+    },
+    {
+     "name": "dem13_n45w111",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n45w111/USGS_13_n45w111_20250122.tif",
+     "published": "2025-01-23",
+     "retrieved": "2026-09-24T13:13:44Z",
+     "bytes": 388236519,
+     "sha256": "15a7abc2d81170d99be7cdc0a3ad45b4053a931073c5fdad0cbd91e42bfb139b"
+    },
+    {
+     "name": "dem13_n45w112",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n45w112/USGS_13_n45w112_20241127.tif",
+     "published": "2024-11-29",
+     "retrieved": "2026-09-24T13:47:33Z",
+     "bytes": 387180863,
+     "sha256": "3939e225507516cece9aa7f4717f26c71485551c8ec0a0da14db225d919114a1"
+    },
+    {
+     "name": "dem13_n46w110",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n46w110/USGS_13_n46w110_20260813.tif",
+     "published": "2026-08-14",
+     "retrieved": "2026-09-24T13:48:05Z",
+     "bytes": 412550037,
+     "sha256": "1fee8dbdf708ea1df010890cdef97180703f1d1a4694b9587156bc0c451283e2"
+    },
+    {
+     "name": "dem13_n46w111",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n46w111/USGS_13_n46w111_20260813.tif",
+     "published": "2026-08-14",
+     "retrieved": "2026-09-24T13:48:39Z",
+     "bytes": 429887602,
+     "sha256": "9db30479eaaaf435d3befc3bfe01ee6cb292a5b5a7f0015d26f53fe0cde978e5"
+    },
+    {
+     "name": "dem13_n46w112",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n46w112/USGS_13_n46w112_20241127.tif",
+     "published": "2024-11-29",
+     "retrieved": "2026-09-24T13:49:09Z",
+     "bytes": 409793728,
+     "sha256": "5913b7785070d0f628d9f007cc810d9d656b2baa0cbe357080844aeca06642c3"
+    }
+   ]
+  },
+  {
+   "what": "hydrography",
+   "title": "USGS NHDPlus High Resolution",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "name": "nhdplus_1002",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/NHDPlusHR/Beta/GDB/NHDPLUS_H_1002_HU4_GDB.zip",
+     "published": "Wed, 20 Dec 2023 18:52:44 GMT",
+     "retrieved": "2026-09-24T13:14:10Z",
+     "bytes": 160296071,
+     "sha256": "4a1eb9cec3e499928187812a6c5000db45fcbc9001e6105df2b5e253dbd2abf8"
+    },
+    {
+     "name": "nhdplus_1007",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/NHDPlusHR/Beta/GDB/NHDPLUS_H_1007_HU4_GDB.zip",
+     "published": "Wed, 20 Dec 2023 18:52:44 GMT",
+     "retrieved": "2026-09-24T13:13:56Z",
+     "bytes": 139136752,
+     "sha256": "2cc1dd0fad8ae5d61cea622f9d1216e692ad686bcf5f9b07dd60bd2dc0ebe62c"
+    },
+    {
+     "name": "nhdplus_1008",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/NHDPlusHR/Beta/GDB/NHDPLUS_H_1008_HU4_GDB.zip",
+     "published": "Wed, 20 Dec 2023 18:52:44 GMT",
+     "retrieved": "2026-09-24T13:14:57Z",
+     "bytes": 331107530,
+     "sha256": "946b6f0b4bcc8c792a65b704036724876f03070d8f1a554d854b595356554265"
+    },
+    {
+     "name": "nhdplus_1704",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/NHDPlusHR/Beta/GDB/NHDPLUS_H_1704_HU4_GDB.zip",
+     "published": "Wed, 20 Dec 2023 19:13:04 GMT",
+     "retrieved": "2026-09-24T13:14:32Z",
+     "bytes": 304508039,
+     "sha256": "c0a19a214cdc26e90f0e7b75b2cf6d36ed19b7c956a69e290fb73263570e8b4c"
+    }
+   ]
+  },
+  {
+   "what": "land cover",
+   "title": "NLCD 2021 Land Cover, MRLC",
+   "licence": [
+    "Public domain (USGS / MRLC, no restrictions on use)"
+   ],
+   "files": [
+    {
+     "name": "nlcd2021",
+     "url": "https://www.mrlc.gov/geoserver/mrlc_download/wcs?service=WCS&version=2.0.1&request=GetCoverage&coverageId=mrlc_download__NLCD_2021_Land_Cover_L48&format=image%2Fgeotiff&subset=X%28-1207560%2C-1060260%29&subset=Y%282403810%2C2551650%29",
+     "published": "2023",
+     "retrieved": "2026-09-24T13:11:56Z",
+     "bytes": 26217132,
+     "sha256": "3801a2af294e50877043b4d4c20011c88e75d65bdc55f5fc2da4cbbdf167407a"
+    }
+   ]
+  },
+  {
+   "what": "thermal inventory",
+   "title": "Yellowstone thermal feature inventory, RCN export",
+   "licence": [
+    "Locations and types from the Yellowstone National Park thermal inventory (provider Park) and USGS; republished by Montana State University with no licence stated. Facts, not creative expression; see docs/YELLOWSTONE-DATA.md."
+   ],
+   "files": [
+    {
+     "name": "rcn_features",
+     "url": "https://rcn.montana.edu/Features/Search.aspx",
+     "published": null,
+     "retrieved": "2026-09-24T13:11:29Z",
+     "bytes": 2438886,
+     "sha256": "7b5a4a0eb0382673463ae55c0d73e014c67bd0dfc43f6abd38963018a6c84900"
+    }
+   ]
+  },
+  {
+   "what": "names",
+   "title": "USGS GNIS domestic names",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "name": "gnis_ID",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/DomesticNames_ID_Text.zip",
+     "published": "Fri, 28 Aug 2026 15:27:46 GMT",
+     "retrieved": "2026-09-24T13:35:00Z",
+     "bytes": 1106874,
+     "sha256": "5b59e484bb271b6576303b94372cf810ffbbe91fac997822a950121dd9536ad9"
+    },
+    {
+     "name": "gnis_MT",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/DomesticNames_MT_Text.zip",
+     "published": "Fri, 28 Aug 2026 15:27:52 GMT",
+     "retrieved": "2026-09-24T13:34:58Z",
+     "bytes": 1279321,
+     "sha256": "73b1d88973f89c80d100065ffbf894a6ff60021abc7b4842c4b535b09ba10aa6"
+    },
+    {
+     "name": "gnis_WY",
+     "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/DomesticNames_WY_Text.zip",
+     "published": "Fri, 28 Aug 2026 15:28:02 GMT",
+     "retrieved": "2026-09-24T13:34:55Z",
+     "bytes": 839362,
+     "sha256": "918ef5aea44aa7ec71d5161e013fa2cf8bd859585830909c038043fd8de1e7d7"
+    }
+   ]
+  },
+  {
+   "what": "roads",
+   "title": "NPS national roads and trails",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "name": "nps_roads",
+     "url": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_Roads_Geographic/FeatureServer/0/query",
+     "published": null,
+     "retrieved": "2026-09-24T13:12:00Z",
+     "bytes": 2933299,
+     "sha256": "07cdfc2e15f13b4a651400eb98b4613d8cc121794435d2a2a4a7cab2e0eb6400"
+    },
+    {
+     "name": "nps_trails",
+     "url": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_Trails_Geographic/FeatureServer/0/query",
+     "published": null,
+     "retrieved": "2026-09-24T13:12:04Z",
+     "bytes": 4170429,
+     "sha256": "8bfc638d702174b5543b9b9d50876121471523407eada6334fcafbc1167b9875"
+    }
+   ]
+  },
+  {
+   "what": "roads outside the park",
+   "title": "US Census TIGER/Line roads",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "name": "tiger_16043",
+     "url": "https://www2.census.gov/geo/tiger/TIGER2025/ROADS/tl_2025_16043_roads.zip",
+     "published": "Mon, 22 Sep 2025 23:49:19 GMT",
+     "retrieved": "2026-09-24T13:12:10Z",
+     "bytes": 2074146,
+     "sha256": "f9ad5b8c6f69f5a90dbe1dc896a9cc27da5f5e6045b9f12cc72d5ab4229a4d33"
+    },
+    {
+     "name": "tiger_30031",
+     "url": "https://www2.census.gov/geo/tiger/TIGER2025/ROADS/tl_2025_30031_roads.zip",
+     "published": "Mon, 22 Sep 2025 23:49:25 GMT",
+     "retrieved": "2026-09-24T13:12:07Z",
+     "bytes": 2483317,
+     "sha256": "59ca195ea73aa80d77399108ac6a2ac96b01517c5ab318dea5343c39b408a05c"
+    },
+    {
+     "name": "tiger_30067",
+     "url": "https://www2.census.gov/geo/tiger/TIGER2025/ROADS/tl_2025_30067_roads.zip",
+     "published": "Mon, 22 Sep 2025 23:49:25 GMT",
+     "retrieved": "2026-09-24T13:12:09Z",
+     "bytes": 1826492,
+     "sha256": "a2c730d676fa9605513695977aa6215e8ae9603137f1126b1ee8f611878f622d"
+    },
+    {
+     "name": "tiger_56029",
+     "url": "https://www2.census.gov/geo/tiger/TIGER2025/ROADS/tl_2025_56029_roads.zip",
+     "published": "Mon, 22 Sep 2025 23:49:39 GMT",
+     "retrieved": "2026-09-24T13:12:06Z",
+     "bytes": 2082329,
+     "sha256": "cb361d9ada9dd2cef707a1ad02400ab741808cf0c8fd6fc82c09dd1fc8786f5f"
+    },
+    {
+     "name": "tiger_56039",
+     "url": "https://www2.census.gov/geo/tiger/TIGER2025/ROADS/tl_2025_56039_roads.zip",
+     "published": "Mon, 22 Sep 2025 23:49:40 GMT",
+     "retrieved": "2026-09-24T13:12:07Z",
+     "bytes": 794932,
+     "sha256": "73c430b800261e8d8f09d341cf789de7de05ec9acff945d6565d6aac01b986db"
+    }
+   ]
+  },
+  {
+   "what": "geyser eruption data",
+   "title": "NPS, Yellowstone Geysers: Eruption Data",
+   "licence": [
+    "Public domain (work of the United States Government, 17 U.S.C. 105)"
+   ],
+   "files": [
+    {
+     "url": "https://www.nps.gov/yell/planyourvisit/geyser-activity.htm",
+     "published": "2025-04-18"
+    }
+   ]
+  }
+ ],
+ "files": {
+  "0/0_0.bin": "c6e5eaba9f75bbdc83701714d90c30c2ee29e70641dc140fbcaf02eacee6eff8",
+  "0/0_1.bin": "860948928d008e60b319377849254dee7f53bd93dd455d5b18ff8fb7e6a33a34",
+  "0/0_10.bin": "26e269a07999140c68dd41a20291251affad72c652a930cf9d792a0f203473aa",
+  "0/0_11.bin": "bbb712307a9c752b2fecddb063c378f0df1421b920ff40f32087a8af21bc863e",
+  "0/0_12.bin": "7d51c1c06a873566504a1bdd76c23cbd095d741a725c5f8c8401c89a2af86304",
+  "0/0_13.bin": "0250e1dc810b33f77edd5054c976e22778d0ce08288aac584c2a5b2dbc72932b",
+  "0/0_2.bin": "11825f3a2ceb3465feaf07a9a9bb5cb16ec2157b0fe0ab9e7bd104b07d947636",
+  "0/0_3.bin": "8afaac9f80515f1faec3c3a67fd3e32573ae822ff038bb53fc182137a7eded8b",
+  "0/0_4.bin": "78f98f18df13fac3fab9702452ece5c838cd4c958fe10009fcb581e6bef3ea8d",
+  "0/0_5.bin": "1959227c9c0decd6a71b33eead35aa6415a13ec5071b109b56a668dd222acfd6",
+  "0/0_6.bin": "c33aea2d347b7f12932c5209671df06dd56dc98794ac8374f4d832ed8f5b94a0",
+  "0/0_7.bin": "83375a787c5d701e165515deb8a32eef60a03fe9c30da98f035d70d327d5e7eb",
+  "0/0_8.bin": "8cf70ed10d588d9e29573f79445f38dbb316b01f99bf3084c53fa45c82a78f27",
+  "0/0_9.bin": "4bdb93960606bf6817d94bfad9e2e86717a7e1adeb72de122f164f7ad72e6a1c",
+  "0/10_0.bin": "92ac25a0c1623f3b51bb07c17833782f85db16d3bbef9a9908341c8bb896ab03",
+  "0/10_1.bin": "a081ffa7b8a1b9099e94db189134e53dc104c053208edd3231bd0a12df3d1958",
+  "0/10_10.bin": "b3e72f9a92c950f6844367e35e47fed07997091cacda9adf7343c5b23ce5b9a7",
+  "0/10_11.bin": "24436189ee8e533dd053dcd9d55cbd0ef3a0d636d747f40678e92a1976aac982",
+  "0/10_12.bin": "45e47d1aa72c1d5b52d0da6d6c24827bc1e33be498898acd2014c2491edabda0",
+  "0/10_13.bin": "4ef1d8d58b5898776b9da6ff747f8f0f97d23ba39bc72d20700816f43c9b42cf",
+  "0/10_2.bin": "7fc9951db96a90396469523c6fc6302e5145a5fe20944cf25dd6233df1eccb9c",
+  "0/10_3.bin": "c9447caab79bb566488b8f617a113f3d0eb33279a98728494aa6261be418e93a",
+  "0/10_4.bin": "6714c022508f0f9f4e5b99eb1113d37e00ee84faf0da330865ddeff466e04cb4",
+  "0/10_5.bin": "c8651053d1f49abaafd95dcb44e6124e7eaa40093c24cc09896eeea3f2aa20bc",
+  "0/10_6.bin": "c2719a5c1f62f2923422d1aa5646f2e0a5cd7c2c92c12db74f17b73deaa6861b",
+  "0/10_7.bin": "15fb4a88b479016263dc6b154882d82a0c2768aa973b281a1ae0e726bc6834e4",
+  "0/10_8.bin": "e87e6ae1e86519b0ad4e3d1b746fd89c60a3d4341ce0230fe7fb7a23d77a2453",
+  "0/10_9.bin": "8d7774b79049bfe95e27d307ee5bd8ab9260c3c810094ef7ba1bf267cfddefdf",
+  "0/11_0.bin": "aafc7eb7b39c8746f8682be2e59546a01c159246c9218eb1501aa7e2bdacd07c",
+  "0/11_1.bin": "63e4e3626ba6955ab0ed743d4ecc8a8ff445d6e948cb7f53f11c1deb8ade4b03",
+  "0/11_10.bin": "29ca59668e44c82ff1685b598f82ca359a34bc34f8e167218539e0baf7db5cf7",
+  "0/11_11.bin": "3370b529cde1bac1346fc52174b183a28a4e739fedbdc92dc9c42efb28b5229e",
+  "0/11_12.bin": "6c556eebccc87f3683233ec3ed78b1b925d98c173801683be68e1274e7fe82a3",
+  "0/11_13.bin": "c0f28b713d2a4771af5e87abb891a5283cd5d7b499018d35e87f492fec859590",
+  "0/11_2.bin": "6999210c80d3e189f1b06e2689df81634dbe47d075f681cbf526fecdad59c197",
+  "0/11_3.bin": "de8fd33ad7e36bb10884e3491bd304c7975222a354ae2eab133fd009d009df1f",
+  "0/11_4.bin": "a153953df999e1f17c314190e1eabb47e1e0168ebdc17baca353a16f17a86125",
+  "0/11_5.bin": "cbb3d9d3e799fd3252feb736dfb5d03a2463fead142c6f4f38cc5f9415fc89f2",
+  "0/11_6.bin": "9aea8b3adb8673f1b4f4e657cdf0ffca46319aa6fa936590dc255df399a1228d",
+  "0/11_7.bin": "0dcab0c3f8623d8c6b6cbef6a4000fde8bb09e8146afa03fb514fc3790ca5efb",
+  "0/11_8.bin": "508cf2f0d939f4c0c507e3a5e34a8303ae4260ae3b03fd64a81cd6d2615642e8",
+  "0/11_9.bin": "eafd6fbc7b0790ef163a3d99082708576c44aea05a5ffd5fb4d042a92dff1c6e",
+  "0/12_0.bin": "8457d22efeb70234750495d67cf942043c371013f82423b1f3863ad0989ef6e0",
+  "0/12_1.bin": "40fd4fc17bffc143defe4841ba530c406cc64e2612c6f07bb4b01737c7b91922",
+  "0/12_10.bin": "1493ea2129c8a1af0bfad2931bce3214b520d48a825ba0137fa0cdca4a08e66d",
+  "0/12_11.bin": "20b729e810a9b29f16371cfaa73f4013798e684891a3caae71a1ac8fbcfdd7a2",
+  "0/12_12.bin": "3897463d6f94300f401aa2089fddc52f37bfc7de102b5f735e9ebc0037a72fbe",
+  "0/12_13.bin": "aea58713a10ed4cbf5947449f8166f9bb1e9835bbd2243c9f315cbef309bc36c",
+  "0/12_2.bin": "a8e80cebe219821ff3a24a48e905b6b9624d901417163ad7403d3226b5d216bc",
+  "0/12_3.bin": "2dbc8efb21cf7d39b9a246bef322fbc969388c2f6cf0179bfe0cf65ffcdd9baa",
+  "0/12_4.bin": "ed8f8fd4c6e66caee4e7b8b77f2c5aa61b50ae977e176d0b2b1894a4faa4477b",
+  "0/12_5.bin": "24d716edd9f5664b8abe9630f92cae7789bd7a23a237e002ac8d2579ccc08a9d",
+  "0/12_6.bin": "a8a6cf7f377aa5bf9fd0c18128fa46049edd7c1162430284f3d633c9fbee5d46",
+  "0/12_7.bin": "01863275a8efafbd81d8511fb0ee58f71740928adc957f1b3f95c305f59a753f",
+  "0/12_8.bin": "9bcc02c3153b713b4289b03b60bed1f75ba47977dbab2d89b15e0b32b13e94b6",
+  "0/12_9.bin": "9867524f5f8142c4ce8d2c39c59403d86b7d699adca8ffe0c37c77fae3e8c06d",
+  "0/13_0.bin": "8bd37a4ee73744833f74f8b44310e33c42e4d5a00e95095b215480722feab598",
+  "0/13_1.bin": "b5599ae2ed0d8c7e347144d6bd4691e54de497023ba0481c7fd83c500f984511",
+  "0/13_10.bin": "134307ad1c45dd4abfb8d5ddf593bad010037694e4c71988564e8688c17aaab9",
+  "0/13_11.bin": "81ac49b83436736182c200f75ad834ea5e9664c402e2524b32e574619a5c3d98",
+  "0/13_12.bin": "c50ea10b7dc2d11a9b82b76fb114cc151a2a3958e7c9df16d4180854895f47a9",
+  "0/13_13.bin": "9b1072826b151ecb8caea9c4303a34a94e317a512af2a86e11d8a92ad40b138c",
+  "0/13_2.bin": "fe43a0f1e9a185cfa5ed0099c56813befbe5d96eca363dec844b935f022f2197",
+  "0/13_3.bin": "76fc81026a42c5ad3a9665cbf276e5ede2ee25cea4a5ff2078a54f009f8371f2",
+  "0/13_4.bin": "41123462f46367fc8fdb74e7b23f1c6a19c4f780213285f2915d6b7777fceeca",
+  "0/13_5.bin": "3bc32a852ccc37f8c05d7f63eaa069b83cdb1251399c00eeabc25f567e601d7e",
+  "0/13_6.bin": "fe9ad535a21c1d514736dfbb5631d9ba25b0191fe557a23a01cd608c441bf44f",
+  "0/13_7.bin": "1826f1e0166c0899ce120920614a679427ea7b28ada9cd66f73dfc46a083d32b",
+  "0/13_8.bin": "15a25da31d897ba4bcf06354ace7f06dfd6335584673aa4fbac19e5df95366cf",
+  "0/13_9.bin": "bb95b033b0fb97af7a700fd92a257decca46038b80f79846e45269d08c6f7437",
+  "0/1_0.bin": "da2964ac5d095755f0faa4dc2d35068cfd08786cbab96a4258db96d5332d17db",
+  "0/1_1.bin": "e93ff76319375010226c35631122f65300f2a6aeb6998fdaadeaa43ef5d875dc",
+  "0/1_10.bin": "aa6d728c4878bd27bb000de31ae18b7c8f10f1c3c607ad7d6b794f65e1e3d508",
+  "0/1_11.bin": "1873efaa5648c2ceb7a234a3cbe6dd96615ce8b600da15a5fba8df33e79c0fd2",
+  "0/1_12.bin": "b59e928ac43d8d2167c1e194f1a816d674ae914598e225ecbfc83451d72e60b0",
+  "0/1_13.bin": "899d72703e70bf7ec2cd0053697c84eea2e4ce0d613aa31c0e20d01c91fd89a9",
+  "0/1_2.bin": "9a92ead479bca747515a8d92b840bb731e1daa8ef183deff004a485aa209e272",
+  "0/1_3.bin": "2cf41bf9f8aec4e9e32b55f367151e969de0d9b4c416c54d045bf699ef0907a7",
+  "0/1_4.bin": "0b52e4153236f86d93be984f8e4317dd56d19ffec6667d330940dd64e0b6b1bd",
+  "0/1_5.bin": "ef8ab47d71f09bac65cac4f7303cf67b45402e66b9ee4c69e24b0559aad7d962",
+  "0/1_6.bin": "d82d1e89fa6ffafc9895a614b7fbedb47050e191bedbcce6f7e86d94c12e9af8",
+  "0/1_7.bin": "dd1b6f21f56e07586d1351268db211a0878070b081ea9d5fc74695da4b5ceea9",
+  "0/1_8.bin": "2c7887a29f6427e40d671c8c8c65f1295e2677aa3190dfb0b7315c08e913922f",
+  "0/1_9.bin": "11c8bc7de939b5db71fcf3e29736dcc69de2e98cecea9c1c9f27b11bbafd23b9",
+  "0/2_0.bin": "a0a5b130d884c1bb5328d13830b7fb60fa66ec8da844ff0208afa08d2b41032b",
+  "0/2_1.bin": "31efa81a81f67e7fa17600ac0e34b9c2a144e1ba57d1e4f16d746a5b629c335d",
+  "0/2_10.bin": "374f55c3608d25d09623526311ba128fc4434a6afd9c7758082ce4378ed106a4",
+  "0/2_11.bin": "9b8b30a41803ecbcedb8cd63e7641570abc649391fe3f66a8ed9a404a34a83d7",
+  "0/2_12.bin": "8fe95ec7bc78b83c3bdb7a74d99ee3b2eb078146cd6206febb75ae3f3aa5eb35",
+  "0/2_13.bin": "ea2a80e004870098eb7f5f48abd4d6c4908a1702abe7756dea1c213f68c7e9cc",
+  "0/2_2.bin": "db6fc474c2b8ecf7d8fcd7154546d7689abe189b283eeb2deb27f931718a1d71",
+  "0/2_3.bin": "904c5ece9f4149656bde07630950543a07b2c2eb382dad2b42649943f21901f6",
+  "0/2_4.bin": "60c865387a04d83a2b1b584c56261225ebb2a3a2a317cec279baeb7a809f015c",
+  "0/2_5.bin": "4950689fc54a9133f3fc4446d5ad404bd4a85fdaa71b95aeab80711541b02106",
+  "0/2_6.bin": "be0390130a5f9d235d12720b21ca9edb0ac8403fe8d743efef5064bc4598c37a",
+  "0/2_7.bin": "29faad4b54acb4c5f4dc9cd949db7db18e1bb7550b564506097c0869c12a53ff",
+  "0/2_8.bin": "e6edff962f47577b94d5abf48cec97619027a7bca11aff33498a7b3401bf6ad6",
+  "0/2_9.bin": "6a6a4bcc9c0fe4cab0a2d23ed771f597d692aa10052a1dac3a5da66a62800271",
+  "0/3_0.bin": "54c3d1768b5d2dcaac7d2b59ea9933a0afea769ee4049185ee4583685cbc14ea",
+  "0/3_1.bin": "45d40132a55aa63f8e88c126579323c65189497fc7f89aa4c1a4bb07470fc900",
+  "0/3_10.bin": "4324a35c3643e89a299424c7832e55b1dd4f1fb23291df2191b95ee864e92af1",
+  "0/3_11.bin": "91b8aabcc8e48ecfc7e4946ba0a0ec9a6ac6bc2677e07b270d34cd22e74049c8",
+  "0/3_12.bin": "395252b1034df27bd83e115c59c9c9eed8d536a0db00d6b75fc4a7db0e93bd07",
+  "0/3_13.bin": "ae0c90ed8d74567834a45745b70594f90c9be7b9b143831cab366b21e5a5e934",
+  "0/3_2.bin": "2ae0570c87c70482a3d0bc33a6a1372311ce35bc6d9b0e705de75f60673aef0f",
+  "0/3_3.bin": "b61bfd46b7c160ae8eb602a799065ada9a7fb47ca8ba6d9ed0dce7fdf0dbadc0",
+  "0/3_4.bin": "eddd539c9274f3d0a264fbdd21ce74b0b09dbb5ce06e375f5992fbeb30b83979",
+  "0/3_5.bin": "4bc86adb9b68415716b8aa3fcd4af5c32cb96b056c77dce7704a9f53a0bc1fd3",
+  "0/3_6.bin": "ac7ca19dbaf69b47a2e5c730b56a48ffbbec0406a3bbd43d47a5f06b3961e32c",
+  "0/3_7.bin": "70f17ae474b8697a4905d847cb1aca6820688a71f0b4c9b2eb8e833217130873",
+  "0/3_8.bin": "6ae321bf0a6ae20969ada7ab3712b844b157ef08c4b2d6a4858b7b7827b89c51",
+  "0/3_9.bin": "5b3933802e54bbaaa009ff3a8a5d8b1edc6de9b374d972348cb05ef5f674c2b5",
+  "0/4_0.bin": "6d0d437c1448ad77aa432a28955d6974ce9ae9c0a832b60d0ce0f86e77dea92f",
+  "0/4_1.bin": "b87e4d26fa0492fab90960f2e9e47c8c8090491e920e19d9680c565c82ba9ec6",
+  "0/4_10.bin": "7d16285c3cbcb6b97354c96ea598c00e46aa835f41294811b85558677cdc359c",
+  "0/4_11.bin": "377133a36f19d6886c869cd377bfc5f90f9f8707b35066c189fdcb84f7fd3479",
+  "0/4_12.bin": "170635c660dd7711519e2ef7bfc5a9b274365c0539aed03daa20b738afb0939d",
+  "0/4_13.bin": "ad02459b39bd018c7633504622ff06ffc369c59d1d107717c78692adf8f0070d",
+  "0/4_2.bin": "cf63c4c75b85dbc1ed8d14b87bb662cf935be8e3912e990e81e2e392a6bacc48",
+  "0/4_3.bin": "1622c26f573b443ac09290de9474902648c7de2303401374099bea43c242a87f",
+  "0/4_4.bin": "4fb99034eef5b1a255212ef9d78ad1d99052778a91a55f3e1546f7c83c526b17",
+  "0/4_5.bin": "f6cd16fe8dd4efa764a70810377e62a32e4329298d458b60c541c2c55549e620",
+  "0/4_6.bin": "ababc4d742d739eba2f47ee3a1fd07041e3c773ad7e13c1c7264f06d43e4a3a1",
+  "0/4_7.bin": "6b97704960ea8f0ef4f959867ac8f734da7ff6f302b5aba57721894a624d0073",
+  "0/4_8.bin": "8b0e6fbcfed2f800df0079855710d679346d48c4e9a311a8beb511680f2d012e",
+  "0/4_9.bin": "fe9dd7092151deef9ad4a73e29cb2f9157471449ed8cf8d57761938d7a7c329d",
+  "0/5_0.bin": "56d6ceb825392238246e169eb1c2e6eaa4149fa6a3db350ef7a864d59b75c6a0",
+  "0/5_1.bin": "e4ff1b35f48970569992c46294d9ec4b9267a1a3fc15d3609723dbee9d79a9e3",
+  "0/5_10.bin": "1590df2c102f25986a33ef0d077952e1f73fb4de06d605d52e0afa76975688dd",
+  "0/5_11.bin": "093721f7dc3e41c7cb722f02b96427b684441ea5fb8dc3c3aed0602b15f33302",
+  "0/5_12.bin": "a3459e1b3e7dd27ecc0f1977519f28782116b2ec7a85f82b13e0f62811311cc9",
+  "0/5_13.bin": "b17823886be531b17033f5680e0578f421c3b2c7da5946bd423f21c514f1539d",
+  "0/5_2.bin": "2ff4c6cf9a0729b48e073b4e204bbf90bba5690ce29f845317b4e44481040cd7",
+  "0/5_3.bin": "ee65a46db63ba772ae89d4c9d05858ea7cacc8849cd84d3796558a7b3a2f5d63",
+  "0/5_4.bin": "e15d11b6329670fae381cd9596143df6cd44055aba2bb6e11e7ee9250056627f",
+  "0/5_5.bin": "5e103fa2c5cb07ce24148769181268e27ff970922c22bfe2b489bcb961b4200a",
+  "0/5_6.bin": "f2ae5409397c7a357d0494226d69ba3cddb9d8e393c6056715f4fd91b7f6289c",
+  "0/5_7.bin": "ace68a0d924e873c4f4fbc446dd38b6dd76df6c26a05e05634cf48b8a2b72fad",
+  "0/5_8.bin": "2d045611122f15e8e929ffb6dab88e9e9641468ad40861cfebeffd232647c900",
+  "0/5_9.bin": "3a65f55298a2d3f97fff0df0ec16e0fcafe02dc712c3504f38cee901f89d46eb",
+  "0/6_0.bin": "6f0358348ed6b37aa2e2e37c21aa79acbcd7ba9900c7eea35e8ccb126557b030",
+  "0/6_1.bin": "d4414d725f12562ce2fee2fff300d532db015dbd75f7cdb08523b5e7dc22252b",
+  "0/6_10.bin": "0e9c2c5c5cdebddb12ccaa9251aa0af1ea05df7e5849d9506608e7c59613a6b8",
+  "0/6_11.bin": "4d296c065bf5c5c967fb560a71d8b4ab1580111ad7d226b1e5c91c78f447d81c",
+  "0/6_12.bin": "a6fdbcc7aef2c932a46408e8baa7edcf672d823e6103694cac15265dcacaed96",
+  "0/6_13.bin": "65c2a4063c824b655618b3696f282b20405203802501930aa04c51bc84c0198f",
+  "0/6_2.bin": "6d1f739d9642f4536a9ae7eaea43f85a54d1cf28c5954c3a598b44cb22c01786",
+  "0/6_3.bin": "ac0f799e2958b0f2aad96253487a97e1a04fb4953f24f7a22061f9cae5e8e6c2",
+  "0/6_4.bin": "ca46205351086bd883ff489eb9b767a55fb21fec10edda337aec91cbd00e4e83",
+  "0/6_5.bin": "63595cb1cdc319641b2c89468f2b72778a151b826b3723c8f617934c8cdc43e0",
+  "0/6_6.bin": "5610f8de9ccdc64a9a6ce68ce295f398f6a0256d560d3dc13dada73b22129721",
+  "0/6_7.bin": "b8b0e5e10c17d41df4e2077b1c919099deb3f4fb95ade198cb609357f4e6c7dc",
+  "0/6_8.bin": "db074e8013a0e988935a66d5fec1e19770946fd863b8a9cad690c0e17e3eb216",
+  "0/6_9.bin": "c20dcccef7700c1a5d253eae35ac5ddf03fdd8e7aa35b34314415f6884221f1c",
+  "0/7_0.bin": "b20c2039f012b2c9494db644f4ee8e0f5695f38365e891eaebedf37ce2701fba",
+  "0/7_1.bin": "ab329177fd7d29b8e478b91cbfd7b6d87ebe23bab748b05ca94186f8bafa84c5",
+  "0/7_10.bin": "6d6f55dd2b829e86914a6cd317a35a4cf0c0baab810786e085f0b1aec48814c4",
+  "0/7_11.bin": "cb407c03cd8e17e6d84f36d405a44aa03e5fa3f85084f46edccf899173e7ba0a",
+  "0/7_12.bin": "7ef58e51d3bfd93ea9ad426a18613bd5889dd78c829490f270efda834ceb85be",
+  "0/7_13.bin": "93315ee3c40d2ac67e4f59b45e207b1f6fbc41bbf254b372ded3f01e37be39d5",
+  "0/7_2.bin": "818bac2606c399b5470d4e0a78c478db6a63120014aaa6d8fc60992a70a4acf1",
+  "0/7_3.bin": "764d972d3b691a7f312e26476148b9e51488da0ec20c25ec6e80ff2bb2597b45",
+  "0/7_4.bin": "90d6d36c35da9eebc36d9070517bf128398c1c4b6db596567f01085d470e46cf",
+  "0/7_5.bin": "e868416b4d6eccf2dae011368f6bfd140f4bfe3e28505f451ad8924099ef5d91",
+  "0/7_6.bin": "36fc37e3bbb9823d5bafe39b7726870fd6f1df80b811d92f2fc7e859968dfacc",
+  "0/7_7.bin": "63a667d53a4f989645563adf3066a2e1827b2682f8f509f6baf4b54a04ef8478",
+  "0/7_8.bin": "d4547dc893da60163f8d5f297f9ee1b36078e8c88458531dc57a8c1ec861b9fc",
+  "0/7_9.bin": "0ae8392fb566aa52440366b1087de4b36db31252523ff4f139a18b717dd4779a",
+  "0/8_0.bin": "2105b3dff0154d519803b5289248f69b318c68387932f5fec897ad73c6825f01",
+  "0/8_1.bin": "8da4920f892c0c49438c26d2211db1066743bfaf3eaee277cb77a791b67cfb58",
+  "0/8_10.bin": "8697181a0ed75c65520f7b221b2636763a73d4d26a6a6d9a5aff72b4f7440d9f",
+  "0/8_11.bin": "3726830c7f9879f2b2e3fcbb3d43b4b88c520a8691aec7d165b65cb1df51f8c7",
+  "0/8_12.bin": "455bec3ede3a28b3eda39b6b3cf8818f83ba8220c042d6abe6674558f1b0fdbb",
+  "0/8_13.bin": "561476d404a1546f3467d0a46d55564caad4fb8ec65e66bb08beebbbd27a703c",
+  "0/8_2.bin": "c53e423c73e3ede1642dbf795a1d1cecc1c27a3ec2d2593e6542cfc0ecf37b1d",
+  "0/8_3.bin": "254d8c7352d5e978863ae772c434f89d68674eba16e93fb38272319c948af8e9",
+  "0/8_4.bin": "98156c0b3beefa30c36dd5602143b88569069910c864b92925df1bb9027aab59",
+  "0/8_5.bin": "3636d5bac376c21b50b7efcfd9d18ae065b2da8d7453a133b37499d3a81c8c89",
+  "0/8_6.bin": "c6910caced3496282773813493ff9e3fc16347fd3d0f4563d1a25cb9e353de5e",
+  "0/8_7.bin": "541ecc792de2c10fc3c3689bd765e7528b9982908d972a574c223217a88b71b2",
+  "0/8_8.bin": "37112afdd9989f3f82b4dd1f6dc85ecc28fef514347f872bb9066e0006405932",
+  "0/8_9.bin": "004d80d41a6f547e9dbaa14e2f5c323e1bd606e91342be08bee30d3126a4b523",
+  "0/9_0.bin": "52bf8bafb4705246708bf10c1180673595c616407152debdd490f4884ea2ed86",
+  "0/9_1.bin": "6f33dade0c6f578136f72331da00d71594eff27aa6c2b0ec2964277555b5a33e",
+  "0/9_10.bin": "0342e6f11efefb54aada234860b96fb9cca0e595b65792eae5254ccffeafacbc",
+  "0/9_11.bin": "3e141e06d5a20387e097b5478de82a4e4b3b53efb840de7d6cc2f5e71a6fcdde",
+  "0/9_12.bin": "5928a8fe3b8065b4e3551b72d3f4aa8b97af08965eacfcb47cc557fdc4be0f77",
+  "0/9_13.bin": "285782970852d2c9abee8b729fd748f078d881f005328b62bacf54f4f8339950",
+  "0/9_2.bin": "8eebaab309be6a37262800ddd0b2279daee715fbb4b3573492223d08c2229ded",
+  "0/9_3.bin": "1e7f3d817fe57eb64902c71e678a2ce5c831193e5e1fce21933285c4fbd4d2b5",
+  "0/9_4.bin": "dc96c2ece7cadd8b7313b1ef9d5f8f5b6adce1330c8a9e9aaa758cde9725cd4c",
+  "0/9_5.bin": "8d7a854d98bb0f228bac88777574c02d6322a69178e39ed8b91621e5c665a54d",
+  "0/9_6.bin": "e03180eb87c502edb30c73fa1bf5af5ecea83c4b28ab4ac3d835c1e7cb769a22",
+  "0/9_7.bin": "f99e0b5571e4b7ff68134cc8d9790d27441646cc18fd839c2ef98c399692a577",
+  "0/9_8.bin": "549ea16d3bcf84b574df61bd1d691878a25e1a267cf9fbe7a2b557dd4580edc4",
+  "0/9_9.bin": "6bee61dc681905582fa6f9d88faaf3782093d05a531ca6a6c10946ed109c585e",
+  "1/0_0.bin": "dd712cfa454ab1e8e695c4dfdc6f17eac3e3ed8cf9c4f5d4cb906e33075f471f",
+  "1/0_1.bin": "29ddc31b36fa8730e11a96caa5426553378534dc71ebffa4a142f3020a6f430f",
+  "1/0_2.bin": "29651b01f7f37faaa8cd4e5578ccbfe162e62f312d6535a0ee2e52ca46e6bf00",
+  "1/0_3.bin": "eb9c41508147faf5e4d6f094a29d0797f3425cc2d8702421e632dc5429ef9c14",
+  "1/0_4.bin": "7f77c3989466cb83d52a9564c06ef8171d517c5308354910ede5425efe6a2df1",
+  "1/0_5.bin": "e541a73d9a386c0bb045e194e66967f5a2f503cc20dc3dcb882c5d480f225f36",
+  "1/0_6.bin": "56cf3dec80a8b456f648dadda7902aee4062fafefaa2233a615f7c3d2db11b96",
+  "1/1_0.bin": "94a4d63ba5054bb05e35d02d7fad2a4bf9bad1ad7d4165649e947c1d33a51097",
+  "1/1_1.bin": "79f9caea073141e9675ee5c46c0657449f1f8231988aead5e381ed45a114756f",
+  "1/1_2.bin": "eb979d4cda012e323d7d7a8797cf26e9e1bbc663c57a7c6d1e6b51aec4468a50",
+  "1/1_3.bin": "5cf0a23d652480ebd64b469987b825ee0946d84f28d014239baf8ecd3f78a33c",
+  "1/1_4.bin": "3bcab6effdc96a28751291d2ac26e8f40d842125cb968c84c3f9f501fb1448f4",
+  "1/1_5.bin": "5840addb58f8603fdf070e503f09906cea7bdb1d37f97df5209480a904b727d1",
+  "1/1_6.bin": "d0c8ca7c173e71dd3253d6555fae56d02e9219eb0a81069ba6d20d8f2e27422c",
+  "1/2_0.bin": "30f38f93e46bb17f5a4a476094f6515e1465f9d7e251d4da70a8c39ebe219868",
+  "1/2_1.bin": "9cfc9cf6330df63bbf25c8ecb57595969cb24a5c91905ba5ab1e2edc1962f578",
+  "1/2_2.bin": "3806ea2ea82ece369cba2a80920ff5cad593fd4cae23e15ae5c02beb8c129816",
+  "1/2_3.bin": "d08dbe3d597394aec20f15780f9f1db9a79fd5834fe7e9e4721ea6604fdb0062",
+  "1/2_4.bin": "ad8784d2c8f71b3d371eb9bacb831beadbe453eb41e009f1d21c421283cebb05",
+  "1/2_5.bin": "5c3aef05be5d8ff67f79c3d008fcf0de075001be794e81f59d293eef5e403043",
+  "1/2_6.bin": "de0e541e566c71f78be291becd2b9596662da4b8b68f2a848088916eba35c034",
+  "1/3_0.bin": "812780d06b7c07eec151ff8b2211d6dfc22d0dd5efe3c8be9cba7ebcd3b2b728",
+  "1/3_1.bin": "ad0ab3e21209cf8899be49989e529d39964553730d41948aeded6bf1520d91e8",
+  "1/3_2.bin": "5a40ef3b7507f04fb1ceeaf753afd82919d934fd81c5f75e5f31d40aaf67e694",
+  "1/3_3.bin": "2484125ea0c73faffebba6a553f54186e9b0aec044f40c5b712463c6b2a8ff20",
+  "1/3_4.bin": "8499700f3a51424966bdd8c60a1d76cc28935e517e418ef3cf34c284fd2f5fa3",
+  "1/3_5.bin": "4e3f7f157a0e0c8b466a684ecd44c4fe54c2a955f1446a20867005b2f4323514",
+  "1/3_6.bin": "390d7af460c4a5049f10b2475f3775b9a317a900f14a043dc596f7a26e1c8988",
+  "1/4_0.bin": "48b0edda1771aabfe3402663f5fd7e0b8e207871194240f4172c3abe62def124",
+  "1/4_1.bin": "3a22a908df932f5d0c706a94f08b408694ff26a50f8c3936c9240c5603d2ce49",
+  "1/4_2.bin": "6563cc7b336ccb1bedf302f334a28e42c1a8ea9dac5936baae21f60fa44cdb06",
+  "1/4_3.bin": "1e617a038c46667edc53deb402f8bb1ed824b481a84eabea54b00ae2b6dcfb97",
+  "1/4_4.bin": "89e7d37ca48a94dd4747cfc003d6de7f30d272e0eba495158c8da943e82c4282",
+  "1/4_5.bin": "dd1aedf521b934a6d06700b1b7edab772517b88b7c805591c34e30ea88010504",
+  "1/4_6.bin": "c99ddb637eb3f976abea47dd1617a472fc8dfc80251339111c3dd9609405081d",
+  "1/5_0.bin": "1b3b348aa3f5a055e7a3c54c9466376f113918ef1cf4d9a63cb3e8c188379a7b",
+  "1/5_1.bin": "32edf213a3117f691018506103d2987e86d47eaeaac38be83d79d6c9f872a6e8",
+  "1/5_2.bin": "ce8675ab39f57dadbce0fbdf16615bb25b731013cff8eb0abae0f6595db084a8",
+  "1/5_3.bin": "c4de89566a42ded9a759d6421e59d71054f3f8367cd38a514251789a9d7c0bf9",
+  "1/5_4.bin": "8ba0938d2109f7b0c37ba366a8c447d3dd71da2edc502e4e2ebdd45f5dfed25d",
+  "1/5_5.bin": "24fe079c3fc355b37ecd8f00a9a5c2bc58006faac8e161414b20fdd8d6c763eb",
+  "1/5_6.bin": "cafd03708d40033db8e8eb2b4bb0f75c7650480950be3af38a58655c00e937ee",
+  "1/6_0.bin": "79919af9185e3544079e325fdc204b6891ade35c33edeecbaee5c286263fbd55",
+  "1/6_1.bin": "22c20e38635ad6b5b2968ae6656c8acae5a7c60621afe8df8017764706d23d59",
+  "1/6_2.bin": "abcd65aa283f044f3b4dcb24152e7d530ee9cbaebaffd90967c9fd5ba492a949",
+  "1/6_3.bin": "98fea2a29e736a0573e2bc13c0679e407201b5730efeebaab512a4eeb3e4df26",
+  "1/6_4.bin": "09b3dfe3f89278c3905f4d03f534aaefd2ad88320668b3a0407374e14ca6a44c",
+  "1/6_5.bin": "3a7fef7e36477c03d6783a20fa27f93dbf9b4094138c8996c5f8ce9996756b91",
+  "1/6_6.bin": "ac9c01f77b51e64859560c949d142c7aecb9ac211645ae02c5847ecd6af5415d",
+  "2/0_0.bin": "f50f194e2fe6567e96c9a63116e73f635c14caf3427b55a5bb2cfa53a57cf451",
+  "2/0_1.bin": "51ba63d6c519f5d4166d6fef7366d2e4c5517d599183ddc487631c9a0d9973b7",
+  "2/0_2.bin": "9205ba17f74999cbed463e69a308f527a8790f3af4767d3e148aa0483202afb2",
+  "2/0_3.bin": "43d1ebe39a2d48e049d2f5b0f9d055538e4ad864d61d095dfa1b54569d4ca93a",
+  "2/1_0.bin": "b350f073c14301369a6b3e7c5ea7d64cbd265636664485852faf8fb082af3a56",
+  "2/1_1.bin": "126b028e6d53e290d070c5d3c2f26b4902a3d1bf14cceb983eac9e3ce3369406",
+  "2/1_2.bin": "c74a7eca3ccd9cc589288e3752a2e52eb85e2712e206984ee71d5ea2bef370de",
+  "2/1_3.bin": "3bc9ee98a15587bf894c09fe4f3ff05119131f91c82cdc5917449c4d73ea5d6e",
+  "2/2_0.bin": "59297141ef9782466116bc65819172793667cfa76d2b0b2cf71d8ee1a5da294d",
+  "2/2_1.bin": "cc87fd80dc5d6bc416dc94908b70f2b65a7a40ddfe4dc3a7514ad4b182688d81",
+  "2/2_2.bin": "51200b58c61bf9de823db0fd5e25ab468bcd92d68b88401d6758a1970b153f98",
+  "2/2_3.bin": "9e5e4476e531cbda143c025987d1d7efa1345bc104fa72b054a1d2877d3fd752",
+  "2/3_0.bin": "bc85f59bbec0318af7169445d5151505e0741903e4c6ebdf4ce4f50cfe4df54c",
+  "2/3_1.bin": "e1e14368995301fac9224f9de452016f9063e8e0ead35af298b07fba49814082",
+  "2/3_2.bin": "e96112ec019ee7d26d2424b55bb7448ceb7af04bc7538fe119c679d1ace1ffd2",
+  "2/3_3.bin": "6772e3b91152aef09517b8f3e9df2648217dd1a139e9794ad0d85b9bdde7ee0a",
+  "3/0_0.bin": "7ee2849ddb2126bdd0c0892fa408f88aa53e86a26b80cb8e230a385d6963cfb7",
+  "3/0_1.bin": "e9f97e76fc6ffb10a7bf3fc385b28ab2f2b7c9e4b5d61c501fef15a9e954999e",
+  "3/1_0.bin": "5cc01a05124a38b37af5cd675bace236601b518da210c486ddadac07ce9c898f",
+  "3/1_1.bin": "6535d13763e9cf5f423926709fd5f4902ff9598a09a57bfd5d98ab98e5103dd5",
+  "4/0_0.bin": "9782cb3ef6601bc4d5aa313c37a1db2ca6c5286a0964f0f7fe5372fa85b329bc",
+  "5/0_0.bin": "3e887512b2911cc21f5c0582319646b0b61bbd50565c9348eab2b94e36d6da99",
+  "hero/10_18.bin": "acb740b7a410f53265f0f3bd116beee1a1aecced5e3df6d257b8d636614f0d4a",
+  "hero/10_19.bin": "feb0695527024e8a50f3bfd4d0df255a08426ae5cc9361bfd1e2602f1fc21e29",
+  "hero/10_20.bin": "85b22edaaae8f77d08d75841d52ba6482f8ff82b6547a58db6154a38fe5d0b94",
+  "hero/10_21.bin": "74128996f6354e3928aa66e1398dfbb3e3cd0d1ce804a14f45ad51de81c0a864",
+  "hero/10_22.bin": "f8274bf206438e76c6f99b2b5598cb4237cf5dca225ce9f6aefec8d4c19ca997",
+  "hero/10_23.bin": "65680a01ac04bf1f275cf5b4be7eb0d50f705e1f568118adb2939c1a36c1b6fe",
+  "hero/10_24.bin": "eeebb1296e3103619b4fac39c1334347b52a6ee5068db42ac3431be859aa1ed9",
+  "hero/10_25.bin": "9cfa8e85d9f73d3d0b67616a318433ae22ab3f12de6bf53580b44ba5238918fc",
+  "hero/10_26.bin": "2da0fa6dbc5206d802d2f3043f4c66033e080afda6028a78266187c981f444b9",
+  "hero/10_27.bin": "f510cf0f23d808d83b8872b45fd57d5a91baff52e6c0aaea11f4b860964a58b1",
+  "hero/11_18.bin": "2c52cb6fba576fb30edaa8b214e443b31d70f57412fb9cb7e41e62de7efa41fc",
+  "hero/11_19.bin": "9a0de0d5ad7f42eebccad842f2479f0f4084c68958ed01bc4a0cf936c8a9f8e6",
+  "hero/11_20.bin": "a17da5e6e1a3772d3eac0868c09fa79a4f30f3fef0271b00cb81967905c75e95",
+  "hero/11_21.bin": "6b40ee3a83d64305a17ce6aadb98b1f365a7539ad3de58b2344f8519ec241b3a",
+  "hero/11_22.bin": "60a26cbaa68a6f0161721b814797e0de9eed01b96f3c1c07f4c6ca06bcf280fb",
+  "hero/11_23.bin": "6fdebb913a92f91760a661ec75af5e4f393c8e6bb313941c1c7db5ed7c64c04a",
+  "hero/11_24.bin": "92add683ac215b31f03502992b5b5de2df44bccbce3b9b4611a4a20a10a7d7e2",
+  "hero/11_25.bin": "36686feb67e0679426764c6a1f9079d68c673da92e0f4441e86d9facdde7b9ab",
+  "hero/11_26.bin": "6ba424e574db66de7733257f2a977b2f3022f788b9b6d7663f3f25e94321e54c",
+  "hero/11_27.bin": "6829255326acb260892ff64bf9f706f5776d43bf5dd7c32e6c0c62dbb7cafc35",
+  "hero/6_18.bin": "8bda73cfaf14494c746e62318c4ddeb0841745eba80b4712280345bc3dbad24e",
+  "hero/6_19.bin": "1762749537270f71f49b0d5fa99c8ad10522585d1da726178d293532cd900815",
+  "hero/6_20.bin": "d9794f0d495736ea15f8734f05935f63117c36c7f969df7f3be12479dc080186",
+  "hero/6_21.bin": "7653f1b8841706ae8bc86559f3135a05aee7828761d3061470f136b76f6e4cb0",
+  "hero/6_22.bin": "faf19d1162152d10d15b2bf1a07ec34b74d545bfe1fb7512f09ab61caa214f69",
+  "hero/6_23.bin": "29d9b0198973dea43aeec427380f3f6f7180c8fc5dbb58739f03bf1521197484",
+  "hero/6_24.bin": "0c11950a9823098ecc950644cb55353525dbc454ead53b10094f0c0b785c32c3",
+  "hero/6_25.bin": "14ee1062cda8aa0e8e2c6ace47999f152a868a877f49a0f8689a1aa384460d27",
+  "hero/6_26.bin": "5068bcfc727d7fd91f20395f9b0e7af5bed80fd27d2755b9e1c3bbfcf9996ab5",
+  "hero/6_27.bin": "c704b54fac7a74d967fb67903bdef6457ee67702f7c02d9c014e00f256803714",
+  "hero/7_18.bin": "1e84d6fc9192fee8b196f139d07a909b6646700c020cd3bb545ec63c11190328",
+  "hero/7_19.bin": "2587f61acea0bdc90c27fe5792c657bdc3c735861ac80be3e74f726eaae7ea7a",
+  "hero/7_20.bin": "5440afdbe85f7aef14e0e02c042bfe57c77e12f57e008eac06a80f5beb424b1d",
+  "hero/7_21.bin": "49d0a556e7c4bbaee0290624d453e4e152b95dee2216a1b3856799f4a9e0afac",
+  "hero/7_22.bin": "5b33a5af8e43795ec95dc87bc696802decadb32387802ed3aecafa821327b502",
+  "hero/7_23.bin": "f5c3e7971e3ba086c443b52d84db256e5278371113db58915fd472b1838d9350",
+  "hero/7_24.bin": "f4aeb0c92b5e997d6fbc538d39e0c6d1744e1350b9a697fcda719f9b29d590ed",
+  "hero/7_25.bin": "960e2fb4e8f819b69dc5447797362919a380a95020a0602bbb08d1b0e2ad0517",
+  "hero/7_26.bin": "cc3c43951de54792309bd829d50c5f143d09a48a972d4ed61e9c60e8d5df652e",
+  "hero/7_27.bin": "4e11a1864e67842e768458b2dafad8e5eb6c487324bf408c139c751f2c3635f7",
+  "hero/8_18.bin": "6ba53c0fd175f95340373a7eed1fc6f62370478c0bedc599d23e82d7e005be8e",
+  "hero/8_19.bin": "dc98e615d764f17f0286cc4f3bf6513c6bfc6681dc25be3ac0bd84e01410cd17",
+  "hero/8_20.bin": "581116e2a0c7404fadce227bb7beae6271d0c86222aac14e311075aecb0f5675",
+  "hero/8_21.bin": "56172f1fa280698a4390237fd5ade70c2c052b82bcd88536a6ea6793a77cfbc8",
+  "hero/8_22.bin": "42eb65541af19dd39cd32e5bb39d5b0898bc8be75025fbb2a77ea98fb48c765c",
+  "hero/8_23.bin": "399ebf852ecd01f44864eb4fef96d301b70b61d89052e73168a4e1119e00d965",
+  "hero/8_24.bin": "0b59e9aa4abe1edcbc7ffba417bdffa1b54ef2448ae809f2d737484a071f19d0",
+  "hero/8_25.bin": "2ee64fbaca78d352809e945fd9644700103ffc70fb10bd93a718f5ab46d98dab",
+  "hero/8_26.bin": "052243ba0388ab4d693a724ccf87e2145f84c263deac53934db9f724c27956b0",
+  "hero/8_27.bin": "591e5c73d100e87e402c330be40f4ebe0856092a4335ac486ee41ce6d62bf81d",
+  "hero/9_18.bin": "d2f9480afeb6898ec96e6fc5fb99b33e915423a754cdc5e35f75639f256aaa61",
+  "hero/9_19.bin": "c327fb854f8d9bdd029821ac36466c9d672722747131fefab0c35372cf4bb660",
+  "hero/9_20.bin": "fbfbd994b26d965a013a1eecadea220fc269f714b42595620889df3c582f3a4f",
+  "hero/9_21.bin": "662582550c2e60a5677280eadead74614cfd047e281b83a133dc29be02400bc4",
+  "hero/9_22.bin": "a163142a771eaa55575d0a91ce38d3e32e2a6e8f1d5407b81186629f82c12039",
+  "hero/9_23.bin": "65f3e23ce34fc6d19be5ff715587039d1590a1198b9ae7f3cbb1fc7e38a7053c",
+  "hero/9_24.bin": "cf53cc5f1bdb68a8c6f9c85261852cef3ae762db54dc075e353ea8c856f1bbef",
+  "hero/9_25.bin": "05e60b1ccd39c7fca4563c335314a5854b9e6012572a30b8aa40d86c7d81978d",
+  "hero/9_26.bin": "4bc243b1594d815d4b4a2a7bbd5212d55dad13a4338532747fbd7edac8090e93",
+  "hero/9_27.bin": "d580637b227d03c24acea4ee900439786f6fb3aaec4f0f512651f14e42b9d133",
+  "hydro.json": "9ca3d483c48c95a28dc3ca3930c217d17b70dfe68556c4aafbda588404a57bc4",
+  "landcover/0/0_0.bin": "cf78e48823ae2d25bcf93490aca2e7532ccdc90292aa704731d45958bf875d46",
+  "landcover/0/0_1.bin": "ccbe1eb601ab4a55c6924ff1ebf12ad464326a26b59efb584bfcbe305a9d8e94",
+  "landcover/0/0_10.bin": "b56633408663220c5751054b97c2a7d17dc05fb89344c2862878a4f0b6bef8c1",
+  "landcover/0/0_11.bin": "65d96707a0ee70ba3eb41d0d0312e11c4cee3ce5a7b26df4d6fe8804245454e0",
+  "landcover/0/0_12.bin": "3ecf701ab1637a1d836bfa5a568135e33d9e6d08f2f25013f42767e7c3f4ad67",
+  "landcover/0/0_13.bin": "b20b8948a13ca42eb1772649dcf70166fe8ad53c92e3aa21da0655b0f1042b66",
+  "landcover/0/0_2.bin": "fe2968efb99e9a8537e834e21ff739797754e85862753704115ba71a94824573",
+  "landcover/0/0_3.bin": "5371d670cbd5cfd8ea415b9160d0f301abe7578f1874183786ef61e4f1c47516",
+  "landcover/0/0_4.bin": "53f966c6286cfbdd1230c2b626030f47865742e15962b81369bcf593460c806c",
+  "landcover/0/0_5.bin": "f9f74c2e919dcd6a194ddc575e818a3fd8cbaecb7e534c86753a4df8409fccce",
+  "landcover/0/0_6.bin": "5e371de471d356cf4414bb3595fd765ad65a0f3ecb42d34465c38cca067a8892",
+  "landcover/0/0_7.bin": "1bea72fac09a9c0821634b1c5c21df32d19577059752741fcc3949663fb8866a",
+  "landcover/0/0_8.bin": "a6e667def6881e7edc8e47fb5cb0f84e38012964d79ef64e5a8b8fd3baa07346",
+  "landcover/0/0_9.bin": "b4e2de629dadff6f15d2c8f518432c0b643b4635e091daa5d7748e46adf74677",
+  "landcover/0/10_0.bin": "6d9200ba1cffc355bf042dd02030d791d1034f4e397f78f7aaf27c23fbf25a74",
+  "landcover/0/10_1.bin": "0eecd9e166612e0ab6f5722bedc5fbc1dddf1a1bce00297a84af3eeab07943c3",
+  "landcover/0/10_10.bin": "f094e22e99e8f1ddbe064a07c267f86297751ca4858dffd82f0602ff0a9dc686",
+  "landcover/0/10_11.bin": "c1baad8e95e5386fee4bf822c6d50eb268bdc6c86924c754d6a3be60ed5a58fa",
+  "landcover/0/10_12.bin": "ba198c500b0892db3882313ea051f08e52701525ca2cabff6ad6095a84a9a2b4",
+  "landcover/0/10_13.bin": "0bfff7145fd3078ea6d6314601411b8e65408b86541d8911913ce0664f66213e",
+  "landcover/0/10_2.bin": "65a61dfcfc3ab4a9246c3a3647a505ab6b038a43394a8cda8dec9f24af1cb4b4",
+  "landcover/0/10_3.bin": "1ac56182e0ae54080dcb2ea8a610df5fe8f39bd424be6e20280fd23b1d2e9240",
+  "landcover/0/10_4.bin": "af499ada23245426ba4c160b8fafb693e838e672469f0e4bfe7fd890879336e0",
+  "landcover/0/10_5.bin": "42680ea1702f5bd0346cce15df2eec1f953ab8e03c89b02fb7a709d335371443",
+  "landcover/0/10_6.bin": "897c237f6da8e216924ecb3f05734e68831aea75d74a3ec219190cbcc73c32db",
+  "landcover/0/10_7.bin": "368765c48313700f1a07b8a37e493f03cea7f4f832a952ec5396300b87e763ea",
+  "landcover/0/10_8.bin": "0d6770899f681ec0692617948bee56180f7a2bb0e26741438a724ee9dcfd1368",
+  "landcover/0/10_9.bin": "fc9e327234d3377790ee6e4b6dac7e7618c1bb76949508247d08c74ee6319657",
+  "landcover/0/11_0.bin": "1f48c9754af9ee5f831fc6aa8e66ebdb08cd71d6e59316bb6ee195dd52468027",
+  "landcover/0/11_1.bin": "b2bbf7a0660be08e4c3ab201d2245ee6ec0874829e49aaf5460c0adea3526930",
+  "landcover/0/11_10.bin": "125473cddbff76d5899d809f5ffc4642fe1680eb77270bfc81a963bcc7e6c4ed",
+  "landcover/0/11_11.bin": "2628e09bf493dde7a1cab86bf057113ac936d231375d8c332c89172b947d6f4e",
+  "landcover/0/11_12.bin": "fee1ae858305b670bb469df35dba96cb40fc13f99ba3339513e3e60fb3efa063",
+  "landcover/0/11_13.bin": "7f5382f11c7a256f29bbd001ad616ab24144451b3234b528fd9b11a9956f3504",
+  "landcover/0/11_2.bin": "505591ce6be0e5ad38bf29f8342dbd580c765e3e70b91d1e8aad737795f0af2d",
+  "landcover/0/11_3.bin": "afc7518130e08d2295f25b427188f83064b06a8ad6b9232a9b39eb58287c7ccd",
+  "landcover/0/11_4.bin": "6edafe0b105df48472677a4cef0673956b94ab75c418d555a70ba73237dc52b1",
+  "landcover/0/11_5.bin": "b716d092fb6437f8283cc9591cb381f9c3b463d866b121fa8238f2a7ea60624a",
+  "landcover/0/11_6.bin": "0c89ca28ade418b4834bbda566583fbc795338a1ba2b9683e729d0211ce99d21",
+  "landcover/0/11_7.bin": "84f7e445693dde6beea75bf92834c1fdc819f981578b922d033c05355250d811",
+  "landcover/0/11_8.bin": "bccb8fb27c654608b1b0756ed96041127b6869fb6a8f4dc064aeb59ec833466a",
+  "landcover/0/11_9.bin": "3b4103dee5f5158851b6b675915046ec5f186b75dbab338d914dd5705000d1b7",
+  "landcover/0/12_0.bin": "a271f9d01140127ca8e7a2c62a1c4104f2f5db869c7df438749c49101847bc58",
+  "landcover/0/12_1.bin": "df80bc75a37dbebc9f66f92230e7fc94b26715aaa5420d75d79f4445b718a06d",
+  "landcover/0/12_10.bin": "0c3706013616ca48e0754298355522a43c1cc01214dd3a1c0b135dee3fba3e5f",
+  "landcover/0/12_11.bin": "b023cf56383cb49d3d5cc93e2a40bde1b6ba255eebc5f99b42480ee6b4f2c65b",
+  "landcover/0/12_12.bin": "d420b9945545770f09ad9b948751260e4bde987c01918467d6952559bf8ea550",
+  "landcover/0/12_13.bin": "a938929f0cc8785e4e9f498bacc197211b99bd8dcdcba29e890684ca796d4de4",
+  "landcover/0/12_2.bin": "2d0e8c4a0285bb02dd930a938cf37e20f40a4f33c7b146237a7b78b4a18885ba",
+  "landcover/0/12_3.bin": "de40262edb6074ebae4e9cc4135f3aaf472eb37a20c3712c525aa97c5f7c7f97",
+  "landcover/0/12_4.bin": "a8a8ba35f9c6c31790261959dfc3b43b7bff9e2d53f5236a9e385ab3ba779302",
+  "landcover/0/12_5.bin": "c00f5ba978d356e2a8e6f5494e911322c4d3611efeb94f41358c7ea9dbedd4d2",
+  "landcover/0/12_6.bin": "e78e262e994c387f7a568217cbb57086527a1f0372293d9093c95d2a355e52f1",
+  "landcover/0/12_7.bin": "6dc0a957f561f5e16fe7906b523d2dde011b264ab3f1e4d99a3f09cf1acf9e0f",
+  "landcover/0/12_8.bin": "f2d90b1eb2a934563c4ccd26fec11d2654cf3e3fde4bb1347534b7ab50a837eb",
+  "landcover/0/12_9.bin": "92aabef960addf56eb66738898fa2e5b9341a2d8500c8dcb1d88d418150d9003",
+  "landcover/0/13_0.bin": "52bb44e3f57862b8dab46713067e4adedcc33a1e9ae0ff0cb2a5623e4f93261f",
+  "landcover/0/13_1.bin": "52c93bc1c06e810a6f52ef4d0e186e4ae4a835637b5ca34612fff6a42ce8e457",
+  "landcover/0/13_10.bin": "9c50ecdcbae6ece8626f820957ca189869ba9f885d80a5f9f15c3a058d5bb37d",
+  "landcover/0/13_11.bin": "ee17e81b4e6a14eb1c11730b11961cf592c17fe86b089f9ccfca84ff055010c5",
+  "landcover/0/13_12.bin": "840148ef6b4f10cf7146018d7f068158dc40bbf1b3404c1293353b6a733a1f7d",
+  "landcover/0/13_13.bin": "f2a50fc4d3b57b05e636fc4623cda043148d3a2f6f1cee32bec5fba12f20a4ce",
+  "landcover/0/13_2.bin": "c2f511f520e20be360825824591b1b020e076a7953841650843929da4add6186",
+  "landcover/0/13_3.bin": "0fe3574a9d1f1412e514f268b7a43d40decd03fa1f3830324d4100cff4bb4e03",
+  "landcover/0/13_4.bin": "5747f729390e6bba592b7b2556b3a617e9d9589efa361f423766afbc161960af",
+  "landcover/0/13_5.bin": "13e72ce2ba7fe1febe58166405404fc2413e4e14e63ceb87a805c4c17f8438d2",
+  "landcover/0/13_6.bin": "416239a800f8838793f2c2c8637cbf651c3412575d985a584ad4e3a2b281e8fc",
+  "landcover/0/13_7.bin": "eff169f2450bf47d17ede65c305152ad086e4b7a20492c9ef37a6967875950ea",
+  "landcover/0/13_8.bin": "da3924a5a6fa22866097fdf978140a365092bd71ff8859cc0367f767c771c486",
+  "landcover/0/13_9.bin": "2dc58dbd5d20ef8c0bd58b2b27683357b7abeb61fa4f448544b1788cbe7f2a7e",
+  "landcover/0/1_0.bin": "c4535e2465fab42f406eec4a8a53c09c9e5faf1f36b12c3412baec5214a72169",
+  "landcover/0/1_1.bin": "22e6736fa4d53a5c7a20e668ea1b5af5d9eff70fa79ae11f4349a66b13339a3c",
+  "landcover/0/1_10.bin": "2b49824dfe0e931b4a5d3c1e225039733793a5e9eb5057690af8ffaa89313501",
+  "landcover/0/1_11.bin": "2f8a0f5fb1ddaa6e10a008a2a04aec3b493d63a3e61b2a2cb685640beef80622",
+  "landcover/0/1_12.bin": "5f11c9a4f10067b91807d8f79868ef2821236120a17a801e4304d81999d329c1",
+  "landcover/0/1_13.bin": "6e7be711ca6050a25886447f04e236bcfb9de36b7bd910cbce6f1bbe539f3869",
+  "landcover/0/1_2.bin": "913fffc2bc0923946ad845834fb9ea09f423b5aefa28c4508f937a9effe5a275",
+  "landcover/0/1_3.bin": "a96672a7415a91ab6074cd9c5c892b020e403e492ef0d336fcbff13544169036",
+  "landcover/0/1_4.bin": "c798fe713c760801165b66bd36074084088939fb056257b2ef1ffb8e08b27d4b",
+  "landcover/0/1_5.bin": "9fc4b938d51af8a171df2e6ed2a233274279dc11317b63a049aacc55d31c91df",
+  "landcover/0/1_6.bin": "4bd932faa715111d6a1af558194a4efe6c5cf29e627d5575dd266eeb75f29f92",
+  "landcover/0/1_7.bin": "1bbe60ccfb8040922c43125a3879f00706f9c87929f9b762f952d31f4d82edc0",
+  "landcover/0/1_8.bin": "f8694d2d4ec2eec99f0017fd404cfaba0e1ad5a8b3fb4a0d412f5d299afc3bea",
+  "landcover/0/1_9.bin": "ee5e8fc53429ea206c0f90bb8c01e0e7a69f25ea1b5b0eb81dfde07a532211a1",
+  "landcover/0/2_0.bin": "1a8c1a21259328a36879e27f1a05957bd1ca64b118f23ddc02b93d5f3d658059",
+  "landcover/0/2_1.bin": "fce403e8934b030ddd229214fa38b668954997262617cd618e90bfe4b5f053ad",
+  "landcover/0/2_10.bin": "f6fc55a37d532863a66ef813d8692845377ad2f483f37fc8872ffa8795c64ebb",
+  "landcover/0/2_11.bin": "856ce3045a94b67425688181124d1995baec3a54fdadd6416d381ad24e141e6c",
+  "landcover/0/2_12.bin": "3b357af917f7703ab8f0a282f2790dac0b864fa39bb89d526926353219fd9168",
+  "landcover/0/2_13.bin": "856d4b320ace92a7e707b1cb66f8e7c37de396b7639caa34b2ffc8f3b6cf8db8",
+  "landcover/0/2_2.bin": "766fc12c53b97598814d152b75c501c0914bbbb0fe2a4437cc18d4a0d21f1759",
+  "landcover/0/2_3.bin": "0ef8c20875415d6d35ae842cc1ec2b29a8f0e73415fc8b8ede01cc6b8581b0d0",
+  "landcover/0/2_4.bin": "ca5c8bf3f4ff6a474289c842e1e144adcd5aa02dcede976106f20f0612a28ae8",
+  "landcover/0/2_5.bin": "58db23cf38f4350840a0f501b6a275112bab570ac43586aa82ecb3733acc24ca",
+  "landcover/0/2_6.bin": "74a79b7a02902d2d92f9f7254b9b1a49399c1a44f08d6b1632d4b3b643a4c27e",
+  "landcover/0/2_7.bin": "5621bdddfd940a7f9193d1c90fe481163621148459c59424c2f6b3a373d32add",
+  "landcover/0/2_8.bin": "d24885d0f5c4b52d67887a6937f02b1beb26abfcc3af16c9865b28a9024ad47d",
+  "landcover/0/2_9.bin": "be0e174ff10cf565fbf44003c1468d140b74d8f280b5dc439903ddbe310dc238",
+  "landcover/0/3_0.bin": "ee0e3a79545a9ff1456b9916da579f02c5d0fe6b3a329ce160937d25aef0f750",
+  "landcover/0/3_1.bin": "0b96a65ae69aa8a9b7738cb47180876ced42b32f891f660083201c20732328b0",
+  "landcover/0/3_10.bin": "b445ca3515f93c8cfafd6847af14dd2545119054f0fbf938cf99a693c9f0b0be",
+  "landcover/0/3_11.bin": "5982c6a19ceb7f944aa3d9b2ea4f28eca8d60fc416dd1ffde2e7616905ebbe8d",
+  "landcover/0/3_12.bin": "ccd5c9264c9d2e7007c99172e2fa4416b4d122e0783b5ada65d237be32b13f80",
+  "landcover/0/3_13.bin": "472dc0579f18bd352979052d7a1d6f01572c91f26d3fb2f727a7688323a12488",
+  "landcover/0/3_2.bin": "376870577d6c9b25ff89c673868898cb581900638ffeaa253d5c28ba5ff2cd12",
+  "landcover/0/3_3.bin": "c83305b702c95679e7342dbc4c9aab2aef71f86ba74724a974b99ae935fe8154",
+  "landcover/0/3_4.bin": "8a5941e738ddebf9366950e7ff00a25adc75adb4bc25cb7ec4e48497724ffb1f",
+  "landcover/0/3_5.bin": "72ed93f8e3ed4a5b5167122288286c3d287922ee0c72282bfaf18c89ce8cd9a0",
+  "landcover/0/3_6.bin": "53e78175b4c8052c92e6b8f59002d0fce69cde22b55f07634a639e13283b92ec",
+  "landcover/0/3_7.bin": "8384472f54d1947ffb24d78ccec7cef64b029443672fd89fa4b79ddb8301df41",
+  "landcover/0/3_8.bin": "13bc3d3dbcbad8f9f8711ca01d48116853b0c35dacc7c2a16bf9ddde5b855e43",
+  "landcover/0/3_9.bin": "4a578a2dc6766f174303a02e0e6279e766175857874a958df3b2c6c36b475e8f",
+  "landcover/0/4_0.bin": "b665d4939f246917f18169d67e2af825c3b43320e1decb503d1e16f2127e8fba",
+  "landcover/0/4_1.bin": "c74dba7dbf5629fa7532b229f5c024635946009d7afb9ae35963374b3fc12cd4",
+  "landcover/0/4_10.bin": "b5608e1507cf840c99c6a888b9d637a45d54718a3113ef09b1296f03989075b6",
+  "landcover/0/4_11.bin": "f8153b81245167ee30d8142bfc90778126fa11fd87136fcf8d945f64b09e3cdf",
+  "landcover/0/4_12.bin": "499526a898893caa2e4a8d6e4961b3d5a4eaf5d601875f922be368e321a33f09",
+  "landcover/0/4_13.bin": "e1671b44ff36757a65140f41dccc3febf6f1ea3a05abafe1fe15debb52450219",
+  "landcover/0/4_2.bin": "74c3ccec4cd77f14f60b23140b2f21519d5d843cb237f0f496560da7112df8d1",
+  "landcover/0/4_3.bin": "a93a9a3978e5f6a778cef49d834b575f533a767144a6e01dc7cd15e4fb02e599",
+  "landcover/0/4_4.bin": "f714e7e16bc6c841d91cbd4c39dd4019904a73b0d998b1a20ae545c3620ec41a",
+  "landcover/0/4_5.bin": "cef9c154722dabf26510f7dc040f97c331a8692846e180222a070068c66d90cd",
+  "landcover/0/4_6.bin": "296ff3ace422ded2e1c33222e2f300562e93610e37667ff56d8624652f6d27a0",
+  "landcover/0/4_7.bin": "e75e5b6fcf03b016de16a092cff202f522d299b46b5fde6e202b8078cbc34037",
+  "landcover/0/4_8.bin": "67f7ce266a6452837276ab1a40fea890f4ee0c6caac9dc75a236b2a4c09d1103",
+  "landcover/0/4_9.bin": "6279a9b23ebefce4d0af721fe91cbf0bf513a0f8d2b3fadb9f5a1c2d4df8c0c9",
+  "landcover/0/5_0.bin": "499904484134cd5e770b51a7d6ede97e9dbb0e8293ea8c159111213d84918a31",
+  "landcover/0/5_1.bin": "f59eb42693a37bbd26edaa66ca98144b7b27b9c1d8c0affc6ac9808803a40abf",
+  "landcover/0/5_10.bin": "7ab859ce6c91cfccd99e9f02f7124b15689b566dfaf6c6e586c810fcde65327f",
+  "landcover/0/5_11.bin": "d521773a91a19a166718ef7d100279355f1b758b15ffca731516ca74644b5504",
+  "landcover/0/5_12.bin": "506d205b91671b42218ae961632314024efd26c7984f96e0b0e64c0a9e5b419c",
+  "landcover/0/5_13.bin": "2e1251d5c0caaca404de68c21045fbd6f4091689846a43dc91b337d053a88ab4",
+  "landcover/0/5_2.bin": "21eac3958fb6b7094afa18edc043424ef57877c41569df58b20eba2351b78182",
+  "landcover/0/5_3.bin": "f0e1c92aec3f9e839540bcd60af8545186efc0a20e94d9bfd95f006d2295a0d2",
+  "landcover/0/5_4.bin": "4d272ceb9c9073a3a73cdd4e122e5ba8d3fa5a4e9726f32a0c40cd395f1a16bd",
+  "landcover/0/5_5.bin": "5a8fc26f1a9cf765a90ea91232af5ff3bd36a3d4fd4b460567e5a7fd5f917bd5",
+  "landcover/0/5_6.bin": "aff66d9c48083f9825ac3e230b0c8c6a3a70f397653df81f7c5ee74015aa7ce7",
+  "landcover/0/5_7.bin": "1407ef9b3373dd9cb07957af0382bbbd4a18bca6f5d91d307823e92fcc6da2e0",
+  "landcover/0/5_8.bin": "15a9675a54658adc3690584b535180f535de18ae5d467decd07543e2b5e0c1b6",
+  "landcover/0/5_9.bin": "f967141137eaab0421ba6bb3013d93e3b14e3dfbb261f1808a5d078b87538efb",
+  "landcover/0/6_0.bin": "d89c6c1add7846bad38360b68b041b1f2ada68d99cae9e0d2de43a2723f3a2f7",
+  "landcover/0/6_1.bin": "e909842c1b5fff32faa9ac39946c184a6b53bea3a783b60645f5c4c7d211ecea",
+  "landcover/0/6_10.bin": "125f9acc5e0e56e56ea0efae4414305e8994f57a559b36ee39c9d0c669555d29",
+  "landcover/0/6_11.bin": "763537dbd7fe3fe4a90741d1b4568b7692a3238db63e0c23d203f4f7002cad95",
+  "landcover/0/6_12.bin": "0e872326235c6e8e4d091d9aa114b65850b9bf358e9c3155d2782f5f6fb1e6a9",
+  "landcover/0/6_13.bin": "46f1db05c384cfc09df5ba4daa0705be695a6b1ddbc263821f60425d8e4dc931",
+  "landcover/0/6_2.bin": "7efb2e460cb212bc43057ef03560bdbf349bc5f71c3baba6e94dc5c2614c0349",
+  "landcover/0/6_3.bin": "e97e4824831ffd7d930ea6562f665b59086f8b4fd524981f717c3fa7f22a269a",
+  "landcover/0/6_4.bin": "bd7796f1c0a2af5626920d436fab4eaf844828b0e1f773c97a75d498bc82ad85",
+  "landcover/0/6_5.bin": "487e4bbd05b1a8d29b55e5d0485f9045ce5b1c368829f912c7b04af56fe74276",
+  "landcover/0/6_6.bin": "848dfb7167bd26c8784e0d39a3abfe1123669b6314568d93be454f33800b721e",
+  "landcover/0/6_7.bin": "e84eb7ab8bd4cbd0493c8d89d3d1e8b421886fcd1b329cce4fd7e81ba24ccd6f",
+  "landcover/0/6_8.bin": "308599283587d5de927a1bd174ce82dbb78912ef6b0153e51967c0f5303c291f",
+  "landcover/0/6_9.bin": "ce8bb15563b95f212f4bab10978e3b5ac3f207f2c075a93fc82dfe705036eb5e",
+  "landcover/0/7_0.bin": "4264b91ceb090404adad416770904da68bf3200ea630e5002779b71ee0e93ace",
+  "landcover/0/7_1.bin": "f34848a74379dcf37298f05e6c4fedddbc41bd4b86294db129e904ac6583ef9c",
+  "landcover/0/7_10.bin": "7b7b6fead7e718058eab2673dcfddddfd80375abfbbb12e58ea5c5b7c7c5fe03",
+  "landcover/0/7_11.bin": "44cc8d516b425c4852716cb2bcccf2c13cc9d85626ee319553ccb4bb2c3626e6",
+  "landcover/0/7_12.bin": "e96ab5aaeb74a8961c19addadbecc261b988197cc4ec656115955714a723caa2",
+  "landcover/0/7_13.bin": "fd60eb153a2e28cc75d5cad664f289fd66125290eaf6a9562f1fc0983058bb02",
+  "landcover/0/7_2.bin": "2ef82bf3f72e021fa749f39e7022e843061f480f541407c8e84770dc144d48a5",
+  "landcover/0/7_3.bin": "4e2144db432aa35fa66eb5f9f1149fbd819d9acdee68ece45219076c05d5ddaa",
+  "landcover/0/7_4.bin": "6d1eb2646801c37815bc057c43b674d3bc251add741afcea9a7d136f8feab2b1",
+  "landcover/0/7_5.bin": "69d8ce47db2056b23461f9fc54e514a2e859210011c0dd564dc84e37d7fe29da",
+  "landcover/0/7_6.bin": "b540e7ee212407dce434f8dffe8d328b6482164256d172ffc51dc195f253e398",
+  "landcover/0/7_7.bin": "72fe4e3b3f3a547d3cf6c8a0d78e6717b058bcb5c1ec80292d755593bb656dd1",
+  "landcover/0/7_8.bin": "04d3fe364757f80a0c497646fd7e133f591c8e4d6c365cbb44bbfe22a2524d23",
+  "landcover/0/7_9.bin": "113dc49c6a5422c83186061b1d6258996d39ae18cb2beb44b10088cc99d22365",
+  "landcover/0/8_0.bin": "b4cbcb86ab027e287bddd105864f0870dce1e1d05aeb4ab4c7b307326bffd540",
+  "landcover/0/8_1.bin": "e31b087272d6ecb73fc85efecfe8ecb14aa6b2bbb2657265b92133de61b9b69b",
+  "landcover/0/8_10.bin": "a39363b7b2ee52d5d3c373fd15c65bcf89adc840eec4bb805ec1ad06e4ce2028",
+  "landcover/0/8_11.bin": "0607cd7828fb14043c34daed1e497d6e527196536c36d27290aa705f62f4c015",
+  "landcover/0/8_12.bin": "32f5034166af3ecf8eaffed59fa658128c9691b01c4e2119ed3e802794bf0756",
+  "landcover/0/8_13.bin": "b806a8549f5ee0a6f28fe054077a4b5ac7f63378969931d0fd287e4315c47267",
+  "landcover/0/8_2.bin": "4497e3b5abe8c763afdfb697c6322da695c0cea5211e641983bb0624ac8529ca",
+  "landcover/0/8_3.bin": "329328695456b8178807f7b7e0be0dd00e67be423dba1d737eb44d3863abd4de",
+  "landcover/0/8_4.bin": "f4a0c71470e9089db397a82153d0977c29d4a89f32db49fb4f5e6daf38fda557",
+  "landcover/0/8_5.bin": "5209ad687e4565a04f0446795f5feba3d7c565d4671b9dca11060dcc8273c9cc",
+  "landcover/0/8_6.bin": "65faeff5a92ec24b0fdb2962d2f024e9dde48f16c1de7b4e77ee28592c41f60d",
+  "landcover/0/8_7.bin": "19ab31359cb77be16e7cdd02be56dbf375bdf392c9aff0d7f03085654c54091c",
+  "landcover/0/8_8.bin": "322a94151b5b88e016dafe9af73ae763178c5f785579b6f1e3547574aaad1db6",
+  "landcover/0/8_9.bin": "6e9e283ceb30c6341b34b39f9f81fad31f20532e96e74f9655ccf8b71e088a5c",
+  "landcover/0/9_0.bin": "1e1f42333294197b4a5359d1f22c46bf7e3ae07183cd1780d523663861854eac",
+  "landcover/0/9_1.bin": "c9b2b463fb0bc670f2c6812ae55e4b9aa351ff6fa830e2ffad07d1f3f25d07bb",
+  "landcover/0/9_10.bin": "a1f8677cef7bbd0ca4f8cea5c1c59604c8ce81ecf136733c909c0ad8bb7c114b",
+  "landcover/0/9_11.bin": "3b1058da5d8ed85bd5dbf69124c8f3f3e9f2fd792be53ee7c222a7b695d342d2",
+  "landcover/0/9_12.bin": "c9aff6d7613ec9ae65205b58234f5758678bbb8e1d843077679853da0540f900",
+  "landcover/0/9_13.bin": "d0322587a69b9f25e4f3aeeaa444546b0dcdb16ce69cd1643143910682893672",
+  "landcover/0/9_2.bin": "ea9e1d75bc65639095d8d1a293895e753f7040fdb9c6b2671810cab7e8d39d74",
+  "landcover/0/9_3.bin": "a44433aae0174b1d8ed66f4261ec35e1b07891af36b2968186b6baccbf7f5912",
+  "landcover/0/9_4.bin": "f48b09ef09e5fad9b016d167c8550c8054ec8da2002820a5cb93233a115f4daf",
+  "landcover/0/9_5.bin": "30bb588b395246d2cfe24363015bd780393a5d58bad5f360394fdd32669cc6b1",
+  "landcover/0/9_6.bin": "4be7b544134247d73b14f8cb791775f7e36350c5f1067ed48a5b0fa700b1399e",
+  "landcover/0/9_7.bin": "accc5867edfa20a2679f72cf00a6ff49de1ec8202ee4731229c6ed49e948f480",
+  "landcover/0/9_8.bin": "8d228c7337fffa9e891d0e996e68c866c8a3a780df9f534b32199202f4b728db",
+  "landcover/0/9_9.bin": "e0158ee13647a4548b87977f4438414e91cae0e29a414fabdde4d48ac3f2fa5d",
+  "landcover/1/0_0.bin": "75fdab3053bd2c02a3e53c5cc867efe5ad8dccf26b9d2d18365f36a174a40368",
+  "landcover/1/0_1.bin": "325600cfed8ad9b043b2c03dda9991d934111614aefc690bf6f0de919ced24e6",
+  "landcover/1/0_2.bin": "19be68aef25175d7e5846c2c45e410991de13cbe59819dcbb8cba5b6371363ab",
+  "landcover/1/0_3.bin": "91aa44a41e9cf160551983137c74667e73cef47677c7f49982472fdaecf83425",
+  "landcover/1/0_4.bin": "998260d02201b4e10ef8928341877c4954d5bb0f85643ff7c63580d5fb8ffb97",
+  "landcover/1/0_5.bin": "c843e1398de1f39a488138bffce7c901a7484569ac873e9b967aa64f10b2bcc6",
+  "landcover/1/0_6.bin": "67d5685407141f8d89fa0a8bf401c1095acc9aef012633ae4bfd4712b518ebd8",
+  "landcover/1/1_0.bin": "3943791ce3a1a1e07d9fc63763b50918ba89e9f14775f1743cb83d3a96a00833",
+  "landcover/1/1_1.bin": "f12fc49a1b6f151854f919f343790830859bbfa5acc93f6a1950129d8c2eb3e2",
+  "landcover/1/1_2.bin": "b436eb32fd1365d90ae5806d82d17a8485646da285c1542dba043a0a8d296c84",
+  "landcover/1/1_3.bin": "edec1ad95a7c27c4ab4a20783416e9de4077dbc37bce2853e6c6e5d3f61f882a",
+  "landcover/1/1_4.bin": "2fbdc6b9fa1ace5e406e7f7777d05997bde868b124e9ff8d63e69153d919764f",
+  "landcover/1/1_5.bin": "6ead416f58c5edc1b0d7a3004c0bfae966bcdb50e21dbc9b75b06881a3edddfa",
+  "landcover/1/1_6.bin": "29ebc343a93dbc84ece90dfd3980d5b3f5fd154eea30161f58aa5381f3296ff8",
+  "landcover/1/2_0.bin": "cec256342a24cf208963e5371c15d37c7a02259e794a44d1e8a73e4e8e7f0644",
+  "landcover/1/2_1.bin": "62068bec30facfd8545e81fee8322582f9ebddd5718fcc63834db7724d377f29",
+  "landcover/1/2_2.bin": "df13c5c0de61b05e0b769475c0c901c033ca05caeedbb7248de5bbd88d0ba401",
+  "landcover/1/2_3.bin": "15a00626789fdfb454caade9613cd3b6d6e374f3f2334252b2b8b6427dcdd306",
+  "landcover/1/2_4.bin": "49f4460399791b5c2cb27f64c8743665dab2562470c83f37616b39438142f57d",
+  "landcover/1/2_5.bin": "c1a950559380a2175d1ecc30f2a429a918909abbc9eeb6e1b3a985d3d18aff6c",
+  "landcover/1/2_6.bin": "eab566cb5a134d872bd1122b4f5f73e3c10874152a95c59187d662b84ab17f18",
+  "landcover/1/3_0.bin": "45ebb5c8584c8727d1cc61925f745cef37f46ba6e4f1d3b5148d9922d3e8c17c",
+  "landcover/1/3_1.bin": "2d1de7266bedf8221b82ca5e3d325017db4f56b8da50aa6f5cdb1ddf3380940b",
+  "landcover/1/3_2.bin": "57bc49985881c5fc01a589b9706e664bfc4098bffeea611f0a4fd87f0b8ec7c3",
+  "landcover/1/3_3.bin": "9a137fb8f97b772a40deaa086758f9d4ebccbccc73c21dc8e2f5078c24b1ad5d",
+  "landcover/1/3_4.bin": "2abacce8fd38f18b0ee80cc26134041fc08b2b8903005741fe062a170b7451df",
+  "landcover/1/3_5.bin": "364cc894a0a03310637f641a9784d04c3853eb765c4527de427be1b954378af1",
+  "landcover/1/3_6.bin": "350204ef56a4768da3a1dff619e7a05cc99e35f4e3325909a6ffdb7468730247",
+  "landcover/1/4_0.bin": "d6595c1767f30f14b881cfd369ac3fdc40b68b7fd765ae8b5c2f082b0e3b05e7",
+  "landcover/1/4_1.bin": "9767033cf80b29533db0cfd481700e50b62a1edb681a671c4bd88e8febcb068f",
+  "landcover/1/4_2.bin": "58ac5f494bf97b611fa6159a8c5076d520f221b8b616dbaa493ba9f26f1fd845",
+  "landcover/1/4_3.bin": "bd2e6c5529008dfb412bce5e2e17c8e41130d56999ac6160631dea7e039d2233",
+  "landcover/1/4_4.bin": "f6e8a7dab4430df5dd529d5145f66fb9fbb84c0a248553d994a059fe1417d2e7",
+  "landcover/1/4_5.bin": "630a30605b5466243a70c479bd3a95d2243d7b88df85cf6675d407963d21d54e",
+  "landcover/1/4_6.bin": "f27dac187404ac15827ec71e9e3fffc903ccc1f16defacb3af48b05414946928",
+  "landcover/1/5_0.bin": "0e1f4e7b86ac9e02b9dd5c874871fab2ee716fb84c5438a556c551300d5cc85d",
+  "landcover/1/5_1.bin": "7833b2968b63ddc82bda0fed7a4d37700c1a13455800d1bd40dc26766196b9c1",
+  "landcover/1/5_2.bin": "c504e4cbb79e0ab5736acd5fb7e910518f7c8ab3d283cde90b4b59efc0af38a8",
+  "landcover/1/5_3.bin": "c214dfacd2f294126c826736efda557ca4c676287e4f6fe336ab7bbd6986c27d",
+  "landcover/1/5_4.bin": "3ff2603e3910c2bb727da3b5baf7bb970fa42a564897388f9e8f573290766e72",
+  "landcover/1/5_5.bin": "c0637b88889bcd8ec3980b146541b90a50fe60a940a95106ce0316d3da19bcd1",
+  "landcover/1/5_6.bin": "29bff4e6eab4c42d90c0a4378517ab20f1f3394c4d01599663fc1c1fca8a89b6",
+  "landcover/1/6_0.bin": "7b02a7f6a939cba411a28e6e32c8bf2b113badec67fb11665048c222651d30c9",
+  "landcover/1/6_1.bin": "2d908b444cdadb32b53d4786ace1352704d3fbdf1ab88d995c7ef624488876ef",
+  "landcover/1/6_2.bin": "efba7dcb0948a5bbdacb6d3547ec2a5b13fb10ba52cb56876290196bcf915eb5",
+  "landcover/1/6_3.bin": "ead59830a7d088bbf7a22112b2d021bb6356f85328559fa9dfd334658eea5d72",
+  "landcover/1/6_4.bin": "18565fa5c18266a7628f46b952545364b72a904e31d70657d494426c2cdd908f",
+  "landcover/1/6_5.bin": "b5973fdcd69b01619457dc87e36621647761feddd6ba82cd60fa741321ea4da8",
+  "landcover/1/6_6.bin": "b44d0e956d190244f230974c56879632a57a56394855aa88de200f976a20c868",
+  "roads.json": "163f06f8a20c479f6d030c793bad579ae365943c15e224ed1b1c0f21496cca53",
+  "thermal.json": "a874331f2b635c19e2af2c3fac46b9cdad39a4f6f86a4dc89ffa7f4523530c88"
+ }
+}
