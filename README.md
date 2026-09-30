@@ -4,6 +4,7 @@ Terrain tiles and map data for the Yellowstone map of
 [FDFPV](https://fdflabs.github.io/fdfpv/), a 100 by 100 km piece of
 Yellowstone National Park at real scale. The simulator fetches these
 files at run time; this repository is served as a static site for that.
+FDFPV and this data repository are made by [fdflabs.com](https://fdflabs.com).
 
 The format is the contract in the simulator's `docs/YELLOWSTONE-PLAN.md`,
 and `manifest.json` lists every file with its checksum. The files are
